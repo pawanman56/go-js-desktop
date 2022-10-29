@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <title>Lorca App</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <style>
+    #textField {
+      paddin-top: 40vh;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="textField"></h1>
+  <script>
+    (async () => {
+      try {
+        let userName = await getUserName();
+        document.getElementById("textField").innerText = `Hello, ${userName}`;
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  </script>
+</body>
+<html>
